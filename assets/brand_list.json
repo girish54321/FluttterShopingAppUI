@@ -1,0 +1,54 @@
+{
+  "barnd_list": {
+    "barnds": [
+      {
+        "brand_name": "Apple",
+        "product_image": [
+          {
+            "image": "https://cdn3.iconfinder.com/data/icons/picons-social/57/56-apple-512.png"
+          }
+        ]
+      },
+      {
+        "brand_name": "Hp",
+        "product_image": [
+          {
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/1200px-HP_New_Logo_2D.svg.png"
+          }
+        ]
+      },
+      {
+        "brand_name": "Nokia",
+        "product_image": [
+          {
+            "image": "https://www.gizmochina.com/wp-content/uploads/2020/08/Nokia-Logo-Featured.jpg"
+          }
+        ]
+      },
+      {
+        "brand_name": "Acer",
+        "product_image": [
+          {
+            "image": "https://logos-download.com/wp-content/uploads/2016/04/Acer_logo_logotype_emblem.png"
+          }
+        ]
+      },
+      {
+        "brand_name": "Samsung",
+        "product_image": [
+          {
+            "image": "https://pngimg.com/uploads/samsung_logo/samsung_logo_PNG3.png"
+          }
+        ]
+      },
+      {
+        "brand_name": "LG",
+        "product_image": [
+          {
+            "image": "https://cdn.freebiesupply.com/images/large/2x/lg-logo-png-transparent.png"
+          }
+        ]
+      }
+    ]
+  }
+}

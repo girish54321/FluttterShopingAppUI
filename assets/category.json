@@ -1,0 +1,54 @@
+{
+  "home_category": {
+    "category": [
+      {
+        "category_name": "Man",
+        "product_image": [
+          {
+            "image": "https://image.flaticon.com/icons/png/128/641/641695.png"
+          }
+        ]
+      },
+      {
+        "category_name": "Woman",
+        "product_image": [
+          {
+            "image": "https://gregorianfoundation.org/wp-content/uploads/2016/04/Women-Icon-b.png"
+          }
+        ]
+      },
+      {
+        "category_name": "Mobile",
+        "product_image": [
+          {
+            "image": "https://image.flaticon.com/icons/png/128/977/977411.png"
+          }
+        ]
+      },
+      {
+        "category_name": "Games",
+        "product_image": [
+          {
+            "image": "https://image.flaticon.com/icons/png/128/686/686589.png"
+          }
+        ]
+      },
+      {
+        "category_name": "HeadPhone",
+        "product_image": [
+          {
+            "image": "https://image.flaticon.com/icons/png/128/2972/2972413.png"
+          }
+        ]
+      },
+      {
+        "category_name": "LapTop",
+        "product_image": [
+          {
+            "image": "https://image.flaticon.com/icons/png/128/65/65732.png"
+          }
+        ]
+      }
+    ]
+  }
+}
