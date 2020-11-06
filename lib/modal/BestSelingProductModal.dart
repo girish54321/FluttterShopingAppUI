@@ -52,65 +52,96 @@ class BestSelling {
 
 class Product {
   Product({
-    this.productName,
-    this.productImage,
-    this.prise,
-    this.brandName,
-    this.inStock,
+    this.id,
+    this.category,
+    this.name,
+    this.rating,
+    this.image,
+    this.description,
+    this.available,
+    this.size,
+    this.condition,
+    this.color,
+    this.price,
+    this.keywords,
+    this.discount,
   });
 
-  String productName;
-  List<ProductImage> productImage;
-  String prise;
-  String brandName;
-  bool inStock;
+  int id;
+  String category;
+  String name;
+  int rating;
+  String image;
+  String description;
+  bool available;
+  List<String> size;
+  Condition condition;
+  String color;
+  double price;
+  List<String> keywords;
+  int discount;
 
   factory Product.fromJson(Map<String, dynamic> json) => Product(
-        productName: json["product_name"] == null ? null : json["product_name"],
-        productImage: json["product_image"] == null
+        id: json["id"] == null ? null : json["id"],
+        category: json["category"] == null ? null : json["category"],
+        name: json["name"] == null ? null : json["name"],
+        rating: json["rating"] == null ? null : json["rating"],
+        image: json["image"] == null ? null : json["image"],
+        description: json["description"] == null ? null : json["description"],
+        available: json["available"] == null ? null : json["available"],
+        size: json["size"] == null
             ? null
-            : List<ProductImage>.from(
-                json["product_image"].map((x) => ProductImage.fromJson(x))),
-        prise: json["prise"] == null ? null : json["prise"],
-        brandName: json["brand_name"] == null ? null : json["brand_name"],
-        inStock: json["in_stock"] == null ? null : json["in_stock"],
+            : List<String>.from(json["size"].map((x) => x)),
+        condition: json["condition"] == null
+            ? null
+            : conditionValues.map[json["condition"]],
+        color: json["color"] == null ? null : json["color"],
+        price: json["price"] == null ? null : json["price"].toDouble(),
+        keywords: json["keywords"] == null
+            ? null
+            : List<String>.from(json["keywords"].map((x) => x)),
+        discount: json["discount"] == null ? null : json["discount"],
       );
 
   Map<String, dynamic> toJson() => {
-        "product_name": productName == null ? null : productName,
-        "product_image": productImage == null
+        "id": id == null ? null : id,
+        "category": category == null ? null : category,
+        "name": name == null ? null : name,
+        "rating": rating == null ? null : rating,
+        "image": image == null ? null : image,
+        "description": description == null ? null : description,
+        "available": available == null ? null : available,
+        "size": size == null ? null : List<dynamic>.from(size.map((x) => x)),
+        "condition":
+            condition == null ? null : conditionValues.reverse[condition],
+        "color": color == null ? null : color,
+        "price": price == null ? null : price,
+        "keywords": keywords == null
             ? null
-            : List<dynamic>.from(productImage.map((x) => x.toJson())),
-        "prise": prise == null ? null : prise,
-        "brand_name": brandName == null ? null : brandName,
-        "in_stock": inStock == null ? null : inStock,
+            : List<dynamic>.from(keywords.map((x) => x)),
+        "discount": discount == null ? null : discount,
       };
 }
 
-class ProductImage {
-  ProductImage({
-    this.image,
-    this.image2,
-    this.image3,
-    this.image4,
-  });
+enum Condition { NEW, RENEWED, USED, COLLECTIBLE }
 
-  String image;
-  String image2;
-  String image3;
-  String image4;
+final conditionValues = EnumValues({
+  "collectible": Condition.COLLECTIBLE,
+  "new": Condition.NEW,
+  "renewed": Condition.RENEWED,
+  "used": Condition.USED
+});
 
-  factory ProductImage.fromJson(Map<String, dynamic> json) => ProductImage(
-        image: json["image"] == null ? null : json["image"],
-        image2: json["image2"] == null ? null : json["image2"],
-        image3: json["image3"] == null ? null : json["image3"],
-        image4: json["image4"] == null ? null : json["image4"],
-      );
+class EnumValues<T> {
+  Map<String, T> map;
+  Map<T, String> reverseMap;
 
-  Map<String, dynamic> toJson() => {
-        "image": image == null ? null : image,
-        "image2": image2 == null ? null : image2,
-        "image3": image3 == null ? null : image3,
-        "image4": image4 == null ? null : image4,
-      };
+  EnumValues(this.map);
+
+  Map<T, String> get reverse {
+    if (reverseMap == null) {
+      reverseMap = map.map((k, v) => new MapEntry(v, k));
+    }
+    return reverseMap;
+  }
 }

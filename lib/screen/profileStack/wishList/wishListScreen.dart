@@ -67,11 +67,11 @@ class _WichListScreenState extends State<WichListScreen> {
                 Product product =
                     bestSeliingProduct.bestSelling.products[index];
                 return new GridListItem(
-                    brandName: product.brandName,
-                    imageUrl: product.productImage[0].image,
-                    inStock: product.inStock,
-                    productName: product.productName,
-                    prise: product.prise);
+                    brandName: product.name,
+                    imageUrl: product.image,
+                    inStock: product.available,
+                    productName: product.name,
+                    prise: product.price.toString());
               },
               childCount: bestSeliingProduct.bestSelling.products.length,
             ),

@@ -2,61 +2,259 @@
   "best_selling": {
     "products": [
       {
-        "product_name": "RTX 3080",
-        "product_image": [
-          {
-            "image": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3080/geforce-rtx-3080-shop-462-l@2x.png",
-            "image2": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3080/geforce-rtx-3080-shop-462-l@2x.png",
-            "image3": "https://cdn.mos.cms.futurecdn.net/aRVsw7HmYPumgn8mUxB88U.jpg",
-            "image4": "https://cdn.vox-cdn.com/thumbor/4qsU56ehayUQOIop7iv9UCIOg-k=/0x0:2040x1351/1200x800/filters:focal(989x562:1315x888)/cdn.vox-cdn.com/uploads/chorus_image/image/67420496/twarren_200909_4184_0008.0.0.jpg"
-          }
-        ],
-        "prise": "80000",
-        "brand_name": "name",
-        "in_stock": false
+        "id": 1,
+        "category": "pc",
+        "name":  "RTX 3080",
+        "rating": 5,
+        "image": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3080/geforce-rtx-3080-shop-462-l@2x.png",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": false,
+        "size": [],
+        "condition": "new",
+        "color": "black",
+        "price": 600.99,
+        "keywords": ["pc", "gpu","computer"],
+        "discount": 0
       },
       {
-        "product_name": "Solid Men Mandarin Collar Green T-Shirt",
-        "product_image": [
-          {
-            "image": "https://rukminim1.flixcart.com/image/880/1056/kf75fgw0-0/t-shirt/f/6/j/xxl-t325-pwgh-seven-rocks-original-imafvpbgf6nchmfj.jpeg?q=50",
-            "image2": "https://rukminim1.flixcart.com/image/880/1056/kf75fgw0-0/t-shirt/e/v/2/xxl-t325-pwgh-seven-rocks-original-imafvpbgpyqbzypw.jpeg?q=50",
-            "image3": "https://rukminim1.flixcart.com/image/880/1056/kf75fgw0-0/t-shirt/e/v/2/xxl-t325-pwgh-seven-rocks-original-imafvpbgpyqbzypw.jpeg?q=50",
-            "image4": "https://rukminim1.flixcart.com/image/880/1056/kf75fgw0-0/t-shirt/e/v/2/xxl-t325-pwgh-seven-rocks-original-imafvpbgpyqbzypw.jpeg?q=50"
-          }
-        ],
-        "prise": "369",
-        "brand_name": "Seven Rocks ",
-        "in_stock": true
+        "id": 2,
+        "category": "shirts",
+        "name": "Solid Men Mandarin Collar Green T-Shirt",
+        "rating": 5,
+        "image": "https://rukminim1.flixcart.com/image/880/1056/kf75fgw0-0/t-shirt/f/6/j/xxl-t325-pwgh-seven-rocks-original-imafvpbgf6nchmfj.jpeg?q=50",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["34", "36", "40", "44"],
+        "condition": "new",
+        "color": "green",
+        "price": 12.99,
+        "discount": 10
       },
       {
-        "product_name": "Casuals for Men Sneakers For Men",
-        "product_image": [
-          {
-            "image": "https://rukminim1.flixcart.com/image/714/857/k6jnfrk0/shoe/z/x/9/171-8-pexlo-black-tan-original-imafzqbthfzkqv76.jpeg?q=50",
-            "image2": "https://rukminim1.flixcart.com/image/880/1056/k6jnfrk0/shoe/z/c/e/171-10-chevit-tan-original-imafzqbt459e9xpt.jpeg?q=50",
-            "image3": "https://rukminim1.flixcart.com/image/880/1056/k6jnfrk0/shoe/z/c/e/171-10-chevit-tan-original-imafzqzhh8hmgeqb.jpeg?q=50",
-            "image4": "https://rukminim1.flixcart.com/image/880/1056/k6jnfrk0/shoe/z/x/9/171-10-pexlo-black-tan-original-imafzqbtvqfbzwyh.jpeg?q=50"
-          }
-        ],
-        "prise": "199",
-        "brand_name": "Men Sneakers",
-        "in_stock": true
+        "id": 3,
+        "category": "shoes",
+        "name": "Casuals for Men Sneakers For Men",
+        "rating": 3,
+        "image": "https://rukminim1.flixcart.com/image/714/857/k6jnfrk0/shoe/z/x/9/171-8-pexlo-black-tan-original-imafzqbthfzkqv76.jpeg?q=50",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["34", "36"],
+        "condition": "new",
+        "color": "grey",
+        "price": 40.99,
+        "discount": 10
       },
       {
-        "product_name": "Asus Pentium",
-        "product_image": [
-          {
-            "image": "https://rukminim1.flixcart.com/image/416/416/k9d3p8w0/computer/c/a/h/asus-na-laptop-original-imafr6cbfurgkspg.jpeg?q=70",
-            "image2": "https://rukminim1.flixcart.com/image/416/416/k9d3p8w0/computer/v/q/m/asus-na-laptop-original-imafr6cbkh3cyuhc.jpeg?q=70",
-            "image3": "https://rukminim1.flixcart.com/image/416/416/kbqu4cw0/computer/c/y/z/asus-na-laptop-original-imaftyzqhf7efhfk.jpeg?q=70",
-            "image4": "https://rukminim1.flixcart.com/image/416/416/k9d3p8w0/computer/v/q/m/asus-na-laptop-original-imafr6cbkgtrfmry.jpeg?q=70"
-          }
-        ],
-        "prise": "539",
-        "brand_name": "Casuals for Men Sneakers For Men ",
-        "in_stock": true
+        "id": 4,
+        "category": "LapTop",
+        "name": "Asus Pentium",
+        "rating": 3,
+        "image": "https://cdn1.smartprix.com/rx-iyjJlCcAN-w1200-h1200/asus-x543ma-gq501t-l.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": [],
+        "condition": "new",
+        "color": "grey",
+        "price": 40.99,
+        "discount": 10
+      },
+      {
+        "id": 5,
+        "category": "shirts",
+        "name": "Fantasy T-shirt",
+        "rating": 4,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["34", "36", "40"],
+        "condition": "new",
+        "color": "blue",
+        "price": 12.99,
+        "keywords": ["t-shirt", "sweatshitrt"],
+        "discount": 0
+      },
+      {
+        "id": 6,
+        "category": "shirts",
+        "name": "Fantasy T-shirt",
+        "rating": 5,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["34", "36", "40", "44"],
+        "condition": "new",
+        "color": "red",
+        "price": 12.99,
+        "discount": 10
+      },
+      {
+        "id": 7,
+        "category": "shirts",
+        "name": "Fantasy T-shirt",
+        "rating": 3,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["34", "36"],
+        "condition": "new",
+        "color": "grey",
+        "price": 40.99,
+        "discount": 10
+      },
+      {
+        "id": 8,
+        "category": "jackets",
+        "name": "Denim Jacket",
+        "rating": 5,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "condition": "new",
+        "color": "grey",
+        "price": 40.99,
+        "discount": 10
+      },
+      {
+        "id": 9,
+        "category": "jeans",
+        "name": "Ripped jeans",
+        "rating": 5,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/11.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["34", "36", "38", "40"],
+        "condition": "renewed",
+        "color": "blue",
+        "price": 20.99,
+        "discount": 5
+      },
+      {
+        "id": 10,
+        "category": "jeans",
+        "name": "Boyfriend jeans",
+        "rating": 4,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/10.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": false,
+        "size": ["34", "36", "38", "40"],
+        "condition": "used",
+        "color": "blue",
+        "price": 20.99,
+        "discount": 5
+      },
+      {
+        "id": 11,
+        "category": "shirts",
+        "name": "Ripped sweatshirt",
+        "rating": 4,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/7.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["34", "36", "38", "40"],
+        "condition": "collectible",
+        "color": "white",
+        "price": 29.99,
+        "discount": 5
+      },
+      {
+        "id": 12,
+        "category": "shirts",
+        "name": "Longsleeve",
+        "rating": 4,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["40"],
+        "condition": "collectible",
+        "color": "black",
+        "price": 120.99,
+        "discount": 0
+      },
+      {
+        "id": 13,
+        "category": "shirts",
+        "name": "Stripped sweatshirt",
+        "rating": 4,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/6.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["40", "38", "36"],
+        "condition": "new",
+        "color": "white",
+        "price": 32.99,
+        "discount": 10
+      },
+      {
+        "id": 14,
+        "category": "trousers",
+        "name": "Red chinos",
+        "rating": 5,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/5.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["40", "38", "36"],
+        "condition": "new",
+        "color": "red",
+        "price": 62.99,
+        "discount": 10
+      },
+      {
+        "id": 15,
+        "category": "coats",
+        "name": "Camel coat",
+        "rating": 5,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/4.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["40", "38", "36"],
+        "condition": "used",
+        "color": "brown",
+        "price": 62.99,
+        "discount": 10
+      },
+      {
+        "id": 16,
+        "category": "jeans",
+        "name": "Blue jeans",
+        "rating": 5,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/3.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["40", "38", "36"],
+        "condition": "new",
+        "color": "blue",
+        "price": 42.99,
+        "discount": 0
+      },
+      {
+        "id": 17,
+        "category": "shirts",
+        "name": "Orange T-shirt",
+        "rating": 3,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/3.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["40", "38", "36"],
+        "condition": "new",
+        "color": "orange",
+        "price": 12.99,
+        "discount": 0
+      },
+      {
+        "id": 18,
+        "category": "skirts",
+        "name": "Ballerina skirt",
+        "rating": 4,
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/2.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam.",
+        "available": true,
+        "size": ["38", "36"],
+        "condition": "collectible",
+        "color": "white",
+        "price": 12.99,
+        "discount": 0
       }
+      
     ]
   }
 }

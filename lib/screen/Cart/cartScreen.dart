@@ -72,15 +72,8 @@ class _CartScreenState extends State<CartScreen> {
         physics: const BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
-              child: // child: SizedBox(height: 33),
-                  FlatButton(
-            onPressed: () {
-              getCartItmes();
-            },
-            child: Text(
-              "Flat Button",
-            ),
-          )),
+            child: SizedBox(height: 33),
+          ),
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {

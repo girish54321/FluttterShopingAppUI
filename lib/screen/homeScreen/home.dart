@@ -126,13 +126,13 @@ class _HomeState extends State<Home> {
                 Product product =
                     bestSeliingProduct.bestSelling.products[index];
                 return new GridListItem(
-                    brandName: product.brandName,
-                    imageUrl: product.productImage[0].image,
-                    inStock: product.inStock,
-                    productName: product.productName,
-                    prise: product.prise);
+                    brandName: product.name,
+                    imageUrl: product.image,
+                    inStock: product.available,
+                    productName: product.name,
+                    prise: product.price.toString());
               },
-              childCount: bestSeliingProduct.bestSelling.products.length,
+              childCount: 6,
             ),
           ),
           SliverToBoxAdapter(
@@ -172,13 +172,13 @@ class _HomeState extends State<Home> {
                 Product product =
                     bestSeliingProduct.bestSelling.products[index];
                 return new GridListItem(
-                    brandName: product.brandName,
-                    imageUrl: product.productImage[0].image,
-                    inStock: product.inStock,
-                    productName: product.productName,
-                    prise: product.prise);
+                    brandName: product.name,
+                    imageUrl: product.image,
+                    inStock: product.available,
+                    productName: product.name,
+                    prise: product.price.toString());
               },
-              childCount: bestSeliingProduct.bestSelling.products.length,
+              childCount: 6,
             ),
           ),
         ],
