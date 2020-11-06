@@ -1,6 +1,14 @@
 # FlutterShopingAppUI
 
 A new Flutter project.
+# Home Screen
+<img src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/1.jpg" height="800">
+
+<img src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/2.jpg" height="800">
+
+<img src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/3.jpg" height="800">
+ 
+<img src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/4.jpg" height="800">
 
 ## Getting Started
 
