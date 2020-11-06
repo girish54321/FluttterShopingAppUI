@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FiltterView extends StatelessWidget {
-  const FiltterView({Key key}) : super(key: key);
+class FilterView extends StatelessWidget {
+  const FilterView({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

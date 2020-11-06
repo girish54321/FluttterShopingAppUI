@@ -1,14 +1,13 @@
 import 'package:FlutterShopingAppUI/animasions/rightToLeft.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-class CateGoryButton extends StatelessWidget {
+class CategoryButton extends StatelessWidget {
   final String title;
   final String imageUrl;
   final Function function;
-  const CateGoryButton({Key key, this.function, this.title, this.imageUrl})
+  const CategoryButton({Key key, this.function, this.title, this.imageUrl})
       : super(key: key);
 
   @override
@@ -28,7 +27,6 @@ class CateGoryButton extends StatelessWidget {
                   width: 60.00,
                   decoration: BoxDecoration(
                     color: Color(0xffffffff),
-                    // color: Colors.red,
                     boxShadow: [
                       BoxShadow(
                         offset: Offset(0.00, 5.00),
@@ -66,7 +64,7 @@ class CateGoryButton extends StatelessWidget {
               ),
             ),
             SizedBox(height: 12),
-            new Text(
+            Text(
               title,
               textAlign: TextAlign.center,
               style: TextStyle(

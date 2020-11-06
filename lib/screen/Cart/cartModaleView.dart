@@ -1,4 +1,4 @@
-import 'package:FlutterShopingAppUI/screen/checkOutScreens/chcekOutScree.dart';
+import 'package:FlutterShopingAppUI/screen/checkOutScreens/checkOutScreen.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/chekOutAddtoCart.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';

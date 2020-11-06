@@ -92,7 +92,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         boxShadow: [
                           BoxShadow(
                             offset: Offset(0.00, 5.00),
-                            color: Color(0xff242424).withOpacity(0.22),
+                            color: Color(0xff242424).withOpacity(0.05),
                             blurRadius: 15,
                           ),
                         ],
@@ -139,11 +139,6 @@ class _OtpScreenState extends State<OtpScreen> {
                                 ),
                                 (route) => false,
                               );
-                              // Navigator.push(
-                              //     context,
-                              //     PageTransition(
-                              //         type: PageTransitionType.rightToLeft,
-                              //         child: HomeMainScreen()));
                             },
                           )
                         ],

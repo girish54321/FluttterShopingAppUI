@@ -19,8 +19,6 @@ class SearchBox extends StatelessWidget {
             filled: true,
             fillColor: Colors.grey[300],
             hintText: 'Search Product',
-            // contentPadding:
-            //     const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 18.0),
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.white),
               borderRadius: BorderRadius.circular(45.0),

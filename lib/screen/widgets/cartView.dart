@@ -6,7 +6,12 @@ import 'package:flutter/material.dart';
 
 class CartViewItem extends StatelessWidget {
   final bool isCart;
-  const CartViewItem({Key key, @required this.isCart}) : super(key: key);
+  final String imageUrl;
+  final String prise;
+
+  const CartViewItem(
+      {Key key, @required this.isCart, this.imageUrl, this.prise})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +20,9 @@ class CartViewItem extends StatelessWidget {
       child: Row(
         children: [
           CachedNetworkImage(
-            imageUrl:
-                "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/5e4787fc-a474-4842-9f67-489d28a9cb1e/sportswear-t-shirt-CLFcd1.jpg",
+            imageUrl: imageUrl != null
+                ? imageUrl
+                : "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/5e4787fc-a474-4842-9f67-489d28a9cb1e/sportswear-t-shirt-CLFcd1.jpg",
             imageBuilder: (context, imageProvider) => Container(
               margin: EdgeInsets.symmetric(vertical: 8, horizontal: 14),
               height: 120.00,
@@ -55,7 +61,7 @@ class CartViewItem extends StatelessWidget {
               ),
               SizedBox(height: 8),
               Text(
-                "1100",
+                prise != null ? prise.toString() : "1100",
                 style: TextStyle(
                   fontFamily: "SF Pro Display",
                   fontWeight: FontWeight.w500,

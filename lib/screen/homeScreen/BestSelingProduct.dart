@@ -1,13 +1,3 @@
-// To parse this JSON data, do
-//
-//     final bestSelingProduct = bestSelingProductFromJson(jsonString);
-
-// import 'dart:convert';
-
-// BestSelingProduct bestSelingProductFromJson(String str) => BestSelingProduct.fromJson(json.decode(str));
-
-// String bestSelingProductToJson(BestSelingProduct data) => json.encode(data.toJson());
-
 class BestSelingProduct {
   BestSelingProduct({
     this.bestSelling,

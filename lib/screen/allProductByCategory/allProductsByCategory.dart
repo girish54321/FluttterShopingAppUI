@@ -2,20 +2,19 @@ import 'dart:convert';
 
 import 'package:FlutterShopingAppUI/modal/BestSelingProductModal.dart';
 import 'package:FlutterShopingAppUI/modal/brandListModal.dart';
-import 'package:FlutterShopingAppUI/screen/widgets/appToolbar.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/featuredBarandsItem.dart';
-import 'package:FlutterShopingAppUI/screen/widgets/fitterView.dart';
+import 'package:FlutterShopingAppUI/screen/widgets/filterView.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/gridListItem.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/seeAllTitle.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
-class AllProductByCatwgory extends StatefulWidget {
+class AllProductsByCategory extends StatefulWidget {
   @override
-  _AllProductByCatwgoryState createState() => _AllProductByCatwgoryState();
+  _AllProductsByCategoryState createState() => _AllProductsByCategoryState();
 }
 
-class _AllProductByCatwgoryState extends State<AllProductByCatwgory> {
+class _AllProductsByCategoryState extends State<AllProductsByCategory> {
   BestSeliingProduct bestSeliingProduct;
   BrandList brandList;
   @override
@@ -115,7 +114,6 @@ class _AllProductByCatwgoryState extends State<AllProductByCatwgory> {
                   (BuildContext context, int index) {
                     Product product =
                         bestSeliingProduct.bestSelling.products[index];
-
                     return new GridListItem(
                         brandName: product.brandName,
                         imageUrl: product.productImage[0].image,
@@ -131,7 +129,7 @@ class _AllProductByCatwgoryState extends State<AllProductByCatwgory> {
               ),
             ]),
       ),
-      bottomSheet: FiltterView(),
+      bottomSheet: FilterView(),
     );
   }
 }

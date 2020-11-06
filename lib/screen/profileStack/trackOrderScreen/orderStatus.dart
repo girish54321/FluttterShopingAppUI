@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:timeline_list/timeline.dart';
 import 'package:timeline_list/timeline_model.dart';
 
-import '../../data.dart';
+import '../../../data.dart';
 
 class OrderStatusView extends StatefulWidget {
   @override

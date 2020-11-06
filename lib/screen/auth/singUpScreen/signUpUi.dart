@@ -1,21 +1,26 @@
-import 'package:FlutterShopingAppUI/screen/otpScreen/otpScreen.dart';
+import 'package:FlutterShopingAppUI/helper/helper.dart';
+import 'package:FlutterShopingAppUI/provider/loginState.dart';
+import 'package:FlutterShopingAppUI/screen/auth/otpScreen/otpScreen.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appInputText.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appToolbar.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:provider/provider.dart';
 import 'package:rules/rules.dart';
 
 class SingUpUi extends StatelessWidget {
   final TextEditingController emailController;
   final TextEditingController passwordController;
   final TextEditingController userNameController;
+  final Function userCreateAccount;
 
   const SingUpUi(
       {Key key,
       this.emailController,
       this.passwordController,
-      this.userNameController})
+      this.userNameController,
+      this.userCreateAccount})
       : super(key: key);
 
   @override
@@ -147,23 +152,19 @@ class SingUpUi extends StatelessWidget {
                           SizedBox(
                             height: 33,
                           ),
-                          AppButton(
-                            buttonText: "SIGN UP",
-                            function: () {
-                              // loginStateProvider.changeLoginState(true);
-                              // Navigator.of(context).pop();
-                              Navigator.push(
-                                  context,
-                                  PageTransition(
-                                      type: PageTransitionType.rightToLeft,
-                                      child: OtpScreen()));
-                              if (_formKey.currentState.validate()) {
-                                Navigator.push(
-                                    context,
-                                    PageTransition(
-                                        type: PageTransitionType.rightToLeft,
-                                        child: OtpScreen()));
-                              }
+                          Consumer<LoginStateProvider>(
+                            builder: (context, loginStateProvider, child) {
+                              return AppButton(
+                                buttonText: "SIGN UP",
+                                function: () {
+                                  if (_formKey.currentState.validate()) {
+                                    userCreateAccount(
+                                        loginStateProvider.changeLoginState);
+                                  } else {
+                                    Helper().vibratPhone();
+                                  }
+                                },
+                              );
                             },
                           ),
                         ],

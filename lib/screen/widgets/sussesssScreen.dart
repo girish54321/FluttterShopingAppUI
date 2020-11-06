@@ -13,7 +13,7 @@ class _SuccessScreenState extends State<SuccessScreen> {
   Widget anim() {
     return ControlledAnimation(
       duration: Duration(milliseconds: 600),
-      curve: Curves.elasticIn,
+      curve: Curves.bounceIn,
       tween: Tween<double>(begin: 0, end: 1),
       builder: (context, scaleValue) {
         return Transform.scale(

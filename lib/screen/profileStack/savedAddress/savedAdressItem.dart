@@ -1,20 +1,23 @@
+import 'package:circular_check_box/circular_check_box.dart';
 import 'package:flutter/material.dart';
 
-class ShipingOpstionItem extends StatelessWidget {
+class SavedAddressItem extends StatelessWidget {
   final dynamic value;
   final dynamic groupValue;
   final Function function;
   final String title;
   final String subTitle;
   final Function changeDeliveryAddressType;
-  const ShipingOpstionItem(
+  final bool selected;
+  const SavedAddressItem(
       {Key key,
       this.value,
       this.groupValue,
       this.function,
       @required this.title,
       @required this.subTitle,
-      this.changeDeliveryAddressType})
+      this.changeDeliveryAddressType,
+      @required this.selected})
       : super(key: key);
 
   @override
@@ -42,15 +45,15 @@ class ShipingOpstionItem extends StatelessWidget {
               color: Color(0xff000000),
             ),
           ),
-          trailing: Radio(
-            // value: BestTutorSite.javatpoint,
-            value: value,
-            // groupValue: _site,
-            groupValue: groupValue,
-            onChanged: (value) {
-              changeDeliveryAddressType(value);
-            },
-          ),
+          trailing: CircularCheckBox(
+              value: selected,
+              checkColor: Colors.white,
+              activeColor: Theme.of(context).accentColor,
+              inactiveColor: Colors.grey,
+              disabledColor: Colors.grey,
+              onChanged: (val) {
+                // changeSameAdress(val);
+              }),
         ),
         SizedBox(height: 12),
         Divider()

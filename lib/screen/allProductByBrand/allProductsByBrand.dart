@@ -1,19 +1,19 @@
 import 'dart:convert';
 
 import 'package:FlutterShopingAppUI/modal/BestSelingProductModal.dart';
-import 'package:FlutterShopingAppUI/screen/widgets/fitterView.dart';
+import 'package:FlutterShopingAppUI/screen/widgets/filterView.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/gridListItem.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
-class AllProductByBrnd extends StatefulWidget {
-  AllProductByBrnd({Key key}) : super(key: key);
+class AllProductsByBrand extends StatefulWidget {
+  AllProductsByBrand({Key key}) : super(key: key);
 
   @override
-  _AllProductByBrndState createState() => _AllProductByBrndState();
+  _AllProductsByBrandState createState() => _AllProductsByBrandState();
 }
 
-class _AllProductByBrndState extends State<AllProductByBrnd>
+class _AllProductsByBrandState extends State<AllProductsByBrand>
     with TickerProviderStateMixin {
   final List<Tab> myTabs = <Tab>[
     Tab(text: 'LEFT'),
@@ -123,7 +123,6 @@ class _AllProductByBrndState extends State<AllProductByBrnd>
                         (BuildContext context, int index) {
                           Product product =
                               bestSeliingProduct.bestSelling.products[index];
-
                           return new GridListItem(
                               brandName: product.brandName,
                               imageUrl: product.productImage[0].image,
@@ -141,7 +140,7 @@ class _AllProductByBrndState extends State<AllProductByBrnd>
                   ]));
         }).toList(),
       ),
-      bottomSheet: FiltterView(),
+      bottomSheet: FilterView(),
     );
   }
 }

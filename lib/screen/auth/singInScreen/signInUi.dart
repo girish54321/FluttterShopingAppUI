@@ -1,6 +1,7 @@
+import 'package:FlutterShopingAppUI/helper/helper.dart';
 import 'package:FlutterShopingAppUI/provider/loginState.dart';
-import 'package:FlutterShopingAppUI/screen/singInScreen/SocialLoginButton.dart';
-import 'package:FlutterShopingAppUI/screen/singUpScreen/singUpScreen.dart';
+import 'package:FlutterShopingAppUI/screen/auth/singInScreen/SocialLoginButton.dart';
+import 'package:FlutterShopingAppUI/screen/auth/singUpScreen/singUpScreen.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appInputText.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appbutton.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
@@ -12,8 +13,10 @@ import 'package:rules/rules.dart';
 class SignInUi extends StatelessWidget {
   final TextEditingController emailController;
   final TextEditingController passwordController;
+  final Function userLogin;
 
-  const SignInUi({Key key, this.emailController, this.passwordController})
+  const SignInUi(
+      {Key key, this.emailController, this.passwordController, this.userLogin})
       : super(key: key);
 
   @override
@@ -153,14 +156,19 @@ class SignInUi extends StatelessWidget {
                               ),
                             ),
                           ),
-                          AppButton(
-                            buttonText: "LOG IN",
-                            function: () {
-                              if (_formKey.currentState.validate()) {
-                                //   userLogin(
-                                //       loginStateProvider.changeLoginState,
-                                //       loginStateProvider.addUser);
-                              }
+                          Consumer<LoginStateProvider>(
+                            builder: (context, loginStateProvider, child) {
+                              return AppButton(
+                                buttonText: "LOG IN",
+                                function: () {
+                                  if (_formKey.currentState.validate()) {
+                                    userLogin(
+                                        loginStateProvider.changeLoginState);
+                                  } else {
+                                    Helper().vibratPhone();
+                                  }
+                                },
+                              );
                             },
                           ),
                         ],
@@ -184,12 +192,18 @@ class SignInUi extends StatelessWidget {
                           EvaIcons.facebook,
                           color: Colors.blue,
                         )),
+                    SizedBox(
+                      height: 22,
+                    ),
                     SocialLoginButton(
                         title: "Sign In with Google",
                         icon: Icon(
                           EvaIcons.google,
                           color: Colors.orange,
                         )),
+                    SizedBox(
+                      height: 24,
+                    ),
                   ],
                 ),
               ),

@@ -1,5 +1,5 @@
-import 'package:FlutterShopingAppUI/screen/trackOrderScreen/orderStatus.dart';
-import 'package:FlutterShopingAppUI/screen/trackOrderScreen/trackOrderItem.dart';
+import 'package:FlutterShopingAppUI/screen/profileStack/trackOrderScreen/orderStatus.dart';
+import 'package:FlutterShopingAppUI/screen/profileStack/trackOrderScreen/trackOrderItem.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appToolbar.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';

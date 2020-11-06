@@ -1,15 +1,16 @@
-import 'package:FlutterShopingAppUI/animasions/rightToLeft.dart';
 import 'package:FlutterShopingAppUI/animasions/showUp.dart';
-import 'package:FlutterShopingAppUI/screen/savedCard/savedCards.dart';
-import 'package:FlutterShopingAppUI/screen/trackOrderScreen/trackOrderScreen.dart';
-import 'package:FlutterShopingAppUI/screen/userAccount/profileSettingItems.dart';
-import 'package:FlutterShopingAppUI/screen/widgets/appNetWorkImage.dart';
-import 'package:FlutterShopingAppUI/screen/widgets/appToolbar.dart';
+import 'package:FlutterShopingAppUI/helper/dialogs.dart';
+import 'package:FlutterShopingAppUI/provider/loginState.dart';
+import 'package:FlutterShopingAppUI/screen/profileStack/savedCard/savedCards.dart';
+import 'package:FlutterShopingAppUI/screen/profileStack/trackOrderScreen/trackOrderScreen.dart';
+import 'package:FlutterShopingAppUI/screen/profileStack/userAccount/profileSettingItems.dart';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:provider/provider.dart';
 
 class UserAccount extends StatefulWidget {
   UserAccount({Key key}) : super(key: key);
@@ -153,10 +154,20 @@ class _UserAccountState extends State<UserAccount> {
                 iconData: Icon(EvaIcons.bellOutline,
                     color: Theme.of(context).accentColor),
               ),
-              ProfileSettingItems(
-                title: "Log Out",
-                iconData: Icon(EvaIcons.logOutOutline,
-                    color: Theme.of(context).accentColor),
+              Consumer<LoginStateProvider>(
+                builder: (context, loginStateProvider, child) {
+                  return ProfileSettingItems(
+                      title: "Log Out",
+                      iconData: Icon(EvaIcons.logOutOutline,
+                          color: Theme.of(context).accentColor),
+                      function: () async {
+                        final action = await Dialogs.yesAbortDialog(
+                            context, 'Log Out', 'Are You Sure ?');
+                        if (action == DialogAction.yes) {
+                          loginStateProvider.logOutUser();
+                        } else {}
+                      });
+                },
               ),
               SizedBox(
                 height: 16,

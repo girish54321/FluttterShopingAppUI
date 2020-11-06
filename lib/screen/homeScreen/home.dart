@@ -3,12 +3,11 @@ import 'dart:convert';
 import 'package:FlutterShopingAppUI/modal/BestSelingProductModal.dart';
 import 'package:FlutterShopingAppUI/modal/HomeCategoryModal.dart';
 import 'package:FlutterShopingAppUI/modal/brandListModal.dart';
-import 'package:FlutterShopingAppUI/screen/allProductByBrand/allProductbyBrand.dart';
-import 'package:FlutterShopingAppUI/screen/allProductByCategory/allProductByCategory.dart';
+import 'package:FlutterShopingAppUI/screen/allProductByBrand/allProductsByBrand.dart';
+import 'package:FlutterShopingAppUI/screen/allProductByCategory/allProductsByCategory.dart';
 import 'package:FlutterShopingAppUI/screen/homeScreen/bannerItem.dart';
 import 'package:FlutterShopingAppUI/screen/homeScreen/categoryButton.dart';
 import 'package:FlutterShopingAppUI/screen/homeScreen/searchBox.dart';
-import 'package:FlutterShopingAppUI/screen/widgets/bottomNavigationBar.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/featuredBarandsItem.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/gridListItem.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/seeAllTitle.dart';
@@ -30,14 +29,14 @@ class _HomeState extends State<Home> {
         context,
         PageTransition(
             type: PageTransitionType.rightToLeft,
-            child: AllProductByCatwgory()));
+            child: AllProductsByCategory()));
   }
 
   gotoBrandPage() {
     Navigator.push(
         context,
         PageTransition(
-            type: PageTransitionType.rightToLeft, child: AllProductByBrnd()));
+            type: PageTransitionType.rightToLeft, child: AllProductsByBrand()));
   }
 
   @override
@@ -105,7 +104,7 @@ class _HomeState extends State<Home> {
                 itemCount: homeCategory.homeCategory.category.length,
                 itemBuilder: (BuildContext context, int index) {
                   Category category = homeCategory.homeCategory.category[index];
-                  return CateGoryButton(
+                  return CategoryButton(
                     function: goToCategoryScreen,
                     title: category.categoryName,
                     imageUrl: category.productImage[0].image,
