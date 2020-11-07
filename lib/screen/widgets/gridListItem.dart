@@ -1,10 +1,7 @@
 import 'package:FlutterShopingAppUI/animasions/rightToLeft.dart';
-import 'package:FlutterShopingAppUI/screen/productDetil/productDetil.dart';
-import 'package:FlutterShopingAppUI/screen/widgets/appNetWorkImage.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/outOfStockView.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
 
 class GridListItem extends StatelessWidget {
   final String imageUrl;
@@ -12,6 +9,8 @@ class GridListItem extends StatelessWidget {
   final String brandName;
   final String prise;
   final bool inStock;
+  final Function goToProductDetils;
+  final int index;
 
   const GridListItem(
       {Key key,
@@ -19,7 +18,9 @@ class GridListItem extends StatelessWidget {
       this.productName,
       this.brandName,
       this.prise,
-      this.inStock})
+      this.inStock,
+      @required this.goToProductDetils,
+      @required this.index})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -27,11 +28,7 @@ class GridListItem extends StatelessWidget {
       delay: 150,
       child: InkWell(
         onTap: () {
-          Navigator.push(
-              context,
-              PageTransition(
-                  type: PageTransitionType.rightToLeft,
-                  child: ProductDetias()));
+          goToProductDetils(index);
         },
         child: Container(
           margin: EdgeInsets.only(

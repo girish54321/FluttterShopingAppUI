@@ -2,12 +2,14 @@ import 'dart:convert';
 
 import 'package:FlutterShopingAppUI/modal/BestSelingProductModal.dart';
 import 'package:FlutterShopingAppUI/modal/brandListModal.dart';
+import 'package:FlutterShopingAppUI/screen/productDetil/productDetil.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/featuredBarandsItem.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/filterView.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/gridListItem.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/seeAllTitle.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class AllProductsByCategory extends StatefulWidget {
   @override
@@ -38,6 +40,16 @@ class _AllProductsByCategoryState extends State<AllProductsByCategory> {
     final jsonResult = json.decode(data);
     brandList = new BrandList.fromJson(jsonResult);
     setState(() {});
+  }
+
+  goToProductDetils(int index) {
+    Navigator.push(
+        context,
+        PageTransition(
+            type: PageTransitionType.rightToLeft,
+            child: ProductDetias(
+              product: bestSeliingProduct.bestSelling.products[index],
+            )));
   }
 
   @override
@@ -115,11 +127,14 @@ class _AllProductsByCategoryState extends State<AllProductsByCategory> {
                     Product product =
                         bestSeliingProduct.bestSelling.products[index];
                     return new GridListItem(
-                        brandName: product.name,
-                        imageUrl: product.image,
-                        inStock: product.available,
-                        productName: product.name,
-                        prise: product.price.toString());
+                      brandName: product.name,
+                      imageUrl: product.image,
+                      inStock: product.available,
+                      productName: product.name,
+                      prise: product.price.toString(),
+                      goToProductDetils: goToProductDetils,
+                      index: index,
+                    );
                   },
                   childCount: bestSeliingProduct.bestSelling.products.length,
                 ),

@@ -1,11 +1,13 @@
 import 'dart:convert';
 
 import 'package:FlutterShopingAppUI/modal/BestSelingProductModal.dart';
+import 'package:FlutterShopingAppUI/screen/productDetil/productDetil.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appToolbar.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/cartView.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/gridListItem.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/seeAllTitle.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class WichListScreen extends StatefulWidget {
   WichListScreen({Key key}) : super(key: key);
@@ -29,6 +31,16 @@ class _WichListScreenState extends State<WichListScreen> {
     final jsonResult = json.decode(data);
     bestSeliingProduct = new BestSeliingProduct.fromJson(jsonResult);
     setState(() {});
+  }
+
+  goToProductDetils(int index) {
+    Navigator.push(
+        context,
+        PageTransition(
+            type: PageTransitionType.rightToLeft,
+            child: ProductDetias(
+              product: bestSeliingProduct.bestSelling.products[index],
+            )));
   }
 
   @override
@@ -67,11 +79,14 @@ class _WichListScreenState extends State<WichListScreen> {
                 Product product =
                     bestSeliingProduct.bestSelling.products[index];
                 return new GridListItem(
-                    brandName: product.name,
-                    imageUrl: product.image,
-                    inStock: product.available,
-                    productName: product.name,
-                    prise: product.price.toString());
+                  brandName: product.name,
+                  imageUrl: product.image,
+                  inStock: product.available,
+                  productName: product.name,
+                  prise: product.price.toString(),
+                  goToProductDetils: goToProductDetils,
+                  index: index,
+                );
               },
               childCount: bestSeliingProduct.bestSelling.products.length,
             ),

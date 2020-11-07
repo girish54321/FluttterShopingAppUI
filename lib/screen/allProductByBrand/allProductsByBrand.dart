@@ -1,10 +1,12 @@
 import 'dart:convert';
 
 import 'package:FlutterShopingAppUI/modal/BestSelingProductModal.dart';
+import 'package:FlutterShopingAppUI/screen/productDetil/productDetil.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/filterView.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/gridListItem.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class AllProductsByBrand extends StatefulWidget {
   AllProductsByBrand({Key key}) : super(key: key);
@@ -45,6 +47,16 @@ class _AllProductsByBrandState extends State<AllProductsByBrand>
     final jsonResult = json.decode(data);
     bestSeliingProduct = new BestSeliingProduct.fromJson(jsonResult);
     setState(() {});
+  }
+
+  goToProductDetils(int index) {
+    Navigator.push(
+        context,
+        PageTransition(
+            type: PageTransitionType.rightToLeft,
+            child: ProductDetias(
+              product: bestSeliingProduct.bestSelling.products[index],
+            )));
   }
 
   @override
@@ -124,6 +136,8 @@ class _AllProductsByBrandState extends State<AllProductsByBrand>
                           Product product =
                               bestSeliingProduct.bestSelling.products[index];
                           return new GridListItem(
+                              index: index,
+                              goToProductDetils: goToProductDetils,
                               brandName: product.name,
                               imageUrl: product.image,
                               inStock: product.available,

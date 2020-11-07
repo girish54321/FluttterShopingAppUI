@@ -57,6 +57,8 @@ dependencies:
   shared_preferences: ^0.5.12+4
   progress_dialog: ^1.2.4
   vibration: ^1.7.1
+  smart_select: ^4.3.2
+  select_dialog: ^1.2.1
 
 dev_dependencies:
   flutter_test:

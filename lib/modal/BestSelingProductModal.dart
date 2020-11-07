@@ -60,6 +60,7 @@ class Product {
     this.description,
     this.available,
     this.size,
+    this.images,
     this.condition,
     this.color,
     this.price,
@@ -75,6 +76,7 @@ class Product {
   String description;
   bool available;
   List<String> size;
+  List<String> images;
   Condition condition;
   String color;
   double price;
@@ -92,6 +94,9 @@ class Product {
         size: json["size"] == null
             ? null
             : List<String>.from(json["size"].map((x) => x)),
+        images: json["images"] == null
+            ? null
+            : List<String>.from(json["images"].map((x) => x)),
         condition: json["condition"] == null
             ? null
             : conditionValues.map[json["condition"]],
@@ -112,6 +117,8 @@ class Product {
         "description": description == null ? null : description,
         "available": available == null ? null : available,
         "size": size == null ? null : List<dynamic>.from(size.map((x) => x)),
+        "images":
+            images == null ? null : List<dynamic>.from(images.map((x) => x)),
         "condition":
             condition == null ? null : conditionValues.reverse[condition],
         "color": color == null ? null : color,

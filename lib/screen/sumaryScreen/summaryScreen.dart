@@ -2,7 +2,6 @@ import 'package:FlutterShopingAppUI/screen/checkOutScreens/widget/checkOutContor
 import 'package:FlutterShopingAppUI/screen/sumaryScreen/cartList.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appToolbar.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/sussesssScreen.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:circular_check_box/circular_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

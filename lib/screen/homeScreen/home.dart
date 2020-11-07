@@ -8,6 +8,7 @@ import 'package:FlutterShopingAppUI/screen/allProductByCategory/allProductsByCat
 import 'package:FlutterShopingAppUI/screen/homeScreen/bannerItem.dart';
 import 'package:FlutterShopingAppUI/screen/homeScreen/categoryButton.dart';
 import 'package:FlutterShopingAppUI/screen/homeScreen/searchBox.dart';
+import 'package:FlutterShopingAppUI/screen/productDetil/productDetil.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/featuredBarandsItem.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/gridListItem.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/seeAllTitle.dart';
@@ -71,6 +72,16 @@ class _HomeState extends State<Home> {
     setState(() {});
   }
 
+  goToProductDetils(int index) {
+    Navigator.push(
+        context,
+        PageTransition(
+            type: PageTransitionType.rightToLeft,
+            child: ProductDetias(
+              product: bestSeliingProduct.bestSelling.products[index],
+            )));
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -126,11 +137,14 @@ class _HomeState extends State<Home> {
                 Product product =
                     bestSeliingProduct.bestSelling.products[index];
                 return new GridListItem(
-                    brandName: product.name,
-                    imageUrl: product.image,
-                    inStock: product.available,
-                    productName: product.name,
-                    prise: product.price.toString());
+                  brandName: product.name,
+                  imageUrl: product.image,
+                  inStock: product.available,
+                  productName: product.name,
+                  prise: product.price.toString(),
+                  goToProductDetils: goToProductDetils,
+                  index: index,
+                );
               },
               childCount: 6,
             ),
@@ -172,11 +186,14 @@ class _HomeState extends State<Home> {
                 Product product =
                     bestSeliingProduct.bestSelling.products[index];
                 return new GridListItem(
-                    brandName: product.name,
-                    imageUrl: product.image,
-                    inStock: product.available,
-                    productName: product.name,
-                    prise: product.price.toString());
+                  brandName: product.name,
+                  imageUrl: product.image,
+                  inStock: product.available,
+                  productName: product.name,
+                  prise: product.price.toString(),
+                  goToProductDetils: goToProductDetils,
+                  index: index,
+                );
               },
               childCount: 6,
             ),
