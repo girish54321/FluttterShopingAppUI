@@ -6,6 +6,7 @@ import 'package:FlutterShopingAppUI/screen/productDetil/productSelcastion2.dart'
 import 'package:FlutterShopingAppUI/screen/productDetil/productViewImages.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/chekOutAddtoCart.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/seeAllTitle.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -56,7 +57,7 @@ class _ProductDetiasState extends State<ProductDetias> {
                 background: Stack(
               children: [
                 ProductImage(
-                    images: widget.product.size.length == 0
+                    images: widget.product.images.length < 2
                         ? [widget.product.image]
                         : widget.product.images,
                     goToImageView: goToImageView),
@@ -92,34 +93,6 @@ class _ProductDetiasState extends State<ProductDetias> {
                         Divider(),
                         Text(
                           "Select Size",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 11,
-                        ),
-                        Container(
-                            height: 33,
-                            child: ListView.builder(
-                              physics: const BouncingScrollPhysics(),
-                              scrollDirection: Axis.horizontal,
-                              itemCount: widget.product.size.length,
-                              itemBuilder: (BuildContext context, int index) {
-                                return ProductSelcationItem(
-                                  selectedSize: selectedSize,
-                                  index: index,
-                                  sizeName: widget.product.size[index],
-                                  selectSize: changeSelectedSize,
-                                );
-                              },
-                            )),
-                        SizedBox(
-                          height: 11,
-                        ),
-                        Text(
-                          "Select Color",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
@@ -190,10 +163,17 @@ class _ProductDetiasState extends State<ProductDetias> {
                   Container(
                     margin: EdgeInsets.only(bottom: 12),
                     child: ListTile(
-                        leading: CircleAvatar(
-                            radius: 27,
-                            backgroundImage: NetworkImage(
-                                "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/5e4787fc-a474-4842-9f67-489d28a9cb1e/sportswear-t-shirt-CLFcd1.jpg")),
+                        leading: CachedNetworkImage(
+                          imageUrl:
+                              "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/5e4787fc-a474-4842-9f67-489d28a9cb1e/sportswear-t-shirt-CLFcd1.jpg",
+                          imageBuilder: (context, imageProvider) =>
+                              CircleAvatar(
+                                  radius: 27, backgroundImage: imageProvider),
+                          placeholder: (context, url) => CircleAvatar(
+                              radius: 27,
+                              backgroundImage:
+                                  AssetImage('assets/images/placholder.jpg')),
+                        ),
                         title: new Text(
                           "Samuel Smith",
                           style: TextStyle(

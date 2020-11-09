@@ -81,6 +81,7 @@ flutter:
     - assets/category.json
     - assets/brand_list.json
     - assets/cart.json
+    - assets/filtter.json
 
   #   - images/a_dot_ham.jpeg
 

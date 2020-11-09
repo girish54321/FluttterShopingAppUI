@@ -1,0 +1,54 @@
+{
+    "filtter": [
+      {
+        "filtter_name": "Sort By",
+        "type": "radio",
+        "itmes": [
+          {
+            "title": "By New",
+            "id": "1"
+          },
+          {
+            "title": "Low To High",
+            "id": "2"
+          }
+        ]
+      },
+      {
+        "filtter_name": "Brands",
+        "type": "check_box",
+        "itmes": [
+          {
+            "title": "Apple",
+            "id": "1"
+          },
+          {
+            "title": "Samsung",
+            "id": "2"
+          },
+          {
+            "title": "Nokia",
+            "id": "3"
+          }
+        ]
+      },
+      {
+        "filtter_name": "Brands",
+        "type": "check_box",
+        "itmes": [
+          {
+            "title": "Apple",
+            "id": "1"
+          },
+          {
+            "title": "Samsung",
+            "id": "2"
+          },
+          {
+            "title": "Nokia",
+            "id": "3"
+          }
+        ]
+      }
+    ]
+  }

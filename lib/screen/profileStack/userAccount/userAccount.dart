@@ -1,9 +1,12 @@
 import 'package:FlutterShopingAppUI/animasions/showUp.dart';
 import 'package:FlutterShopingAppUI/helper/dialogs.dart';
 import 'package:FlutterShopingAppUI/provider/loginState.dart';
+import 'package:FlutterShopingAppUI/screen/profileStack/savedAddress/savedAddress.dart';
 import 'package:FlutterShopingAppUI/screen/profileStack/savedCard/savedCards.dart';
 import 'package:FlutterShopingAppUI/screen/profileStack/trackOrderScreen/trackOrderScreen.dart';
 import 'package:FlutterShopingAppUI/screen/profileStack/userAccount/profileSettingItems.dart';
+import 'package:FlutterShopingAppUI/screen/profileStack/wishList/wishListScreen.dart';
+import 'package:FlutterShopingAppUI/screen/widgets/appToolbar.dart';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
@@ -30,7 +33,11 @@ class _UserAccountState extends State<UserAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: header(context, null, 1),
+      // appBar: AppBar(
+      //   elevation: 0,
+      //   // backgroundColor: Colors.white,
+      //   centerTitle: true,
+      // ),
       body: SafeArea(
         left: true,
         top: true,
@@ -45,59 +52,37 @@ class _UserAccountState extends State<UserAccount> {
                 height: 14,
               ),
               ShowUp(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(left: 14),
-                      child: CachedNetworkImage(
-                        placeholder: (context, url) => CircleAvatar(
-                          radius: 55.0,
-                          backgroundImage:
-                              AssetImage('assets/images/placholder.jpg'),
-                        ),
-                        imageUrl:
-                            "https://m.media-amazon.com/images/M/MV5BM2M2ZGE5NjItYjc2ZS00ZWYzLTk2MzEtZTc3YThhNzhiNmU4XkEyXkFqcGdeQXVyNTU0NDgwMzA@._V1_.jpg",
-                        imageBuilder: (context, imageProvider) => CircleAvatar(
-                          radius: 55.0,
-                          backgroundImage: imageProvider,
-                        ),
-                        errorWidget: (context, url, error) => Container(
-                          // height: 150.0,
-                          child: Icon(Icons.error),
-                        ),
-                      ),
+                child: ListTile(
+                  trailing: CachedNetworkImage(
+                    placeholder: (context, url) => CircleAvatar(
+                      backgroundImage:
+                          AssetImage('assets/images/placholder.jpg'),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(left: 14),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text(
-                            "David Spade",
-                            style: TextStyle(
-                              fontFamily: "SF Pro Display",
-                              fontWeight: FontWeight.w500,
-                              fontSize: 26,
-                              color: Color(0xff000000),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 6.0,
-                          ),
-                          Text(
-                            "iamdavid@gmail.com",
-                            style: TextStyle(
-                              fontFamily: "SF Pro Display",
-                              fontSize: 14,
-                              color: Color(0xff000000),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
+                    imageUrl:
+                        "https://m.media-amazon.com/images/M/MV5BM2M2ZGE5NjItYjc2ZS00ZWYzLTk2MzEtZTc3YThhNzhiNmU4XkEyXkFqcGdeQXVyNTU0NDgwMzA@._V1_.jpg",
+                    imageBuilder: (context, imageProvider) => CircleAvatar(
+                      radius: 28,
+                      backgroundImage: imageProvider,
+                    ),
+                    errorWidget: (context, url, error) => Container(
+                      child: Icon(Icons.error),
+                    ),
+                  ),
+                  title: Text(
+                    "David Spade",
+                    style: TextStyle(
+                      fontFamily: "SF Pro Display",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 26,
+                    ),
+                  ),
+                  subtitle: Text(
+                    "iamdavid@gmail.com",
+                    style: TextStyle(
+                        fontFamily: "SF Pro Display",
+                        fontSize: 14,
+                        height: 1.7),
+                  ),
                 ),
               ),
               SizedBox(height: 8),
@@ -109,11 +94,25 @@ class _UserAccountState extends State<UserAccount> {
                     Icon(EvaIcons.edit, color: Theme.of(context).accentColor),
               ),
               ProfileSettingItems(
+                function: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          child: SavedAddress()));
+                },
                 title: "Shipping Address",
                 iconData: Icon(EvaIcons.pinOutline,
                     color: Theme.of(context).accentColor),
               ),
               ProfileSettingItems(
+                function: () {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          child: WichListScreen()));
+                },
                 title: "Wishlist",
                 iconData: Icon(EvaIcons.heartOutline,
                     color: Theme.of(context).accentColor),
