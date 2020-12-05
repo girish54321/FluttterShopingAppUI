@@ -9,7 +9,6 @@ AppBar header(context, title) {
     title: Text(
       title != null ? title : "",
       style: TextStyle(
-        fontFamily: "SF Pro Display",
         fontSize: 20,
         color: Color(0xff000000),
       ),
@@ -21,20 +20,3 @@ AppBar header(context, title) {
         }),
   );
 }
-
-// AppBar header(context,
-//     {bool isAppTitle = false, String titleText, removeBackButton = false}) {
-//   return AppBar(
-//     automaticallyImplyLeading: removeBackButton ? false : true,
-//     title: Text(
-//       isAppTitle ? "FlutterShare" : titleText,
-//       style: TextStyle(
-//         color: Colors.white,
-//         fontFamily: isAppTitle ? "Signatra" : "",
-//         fontSize: isAppTitle ? 50.0 : 22.0,
-//       ),
-//     ),
-//     centerTitle: true,
-//     backgroundColor: Theme.of(context).accentColor,
-//   );
-// }

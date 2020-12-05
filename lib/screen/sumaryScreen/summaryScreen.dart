@@ -43,7 +43,6 @@ class _SummaryScreenState extends State<SummaryScreen> {
                   "Shipping Address",
                   style: TextStyle(
                     height: 1.6,
-                    fontFamily: "SF Pro Display",
                     fontWeight: FontWeight.w700,
                     fontSize: 18,
                     color: Color(0xff000000),
@@ -53,7 +52,6 @@ class _SummaryScreenState extends State<SummaryScreen> {
                   "21, Alex Davidson Avenue, Opposite Omegatron, Vicent Smith Quarters, Victoria Island, Lagos, Nigeria",
                   style: TextStyle(
                     height: 1.6,
-                    fontFamily: "SF Pro Display",
                     fontSize: 14,
                     color: Color(0xff000000),
                   ),
@@ -76,7 +74,6 @@ class _SummaryScreenState extends State<SummaryScreen> {
                   "Payment",
                   style: TextStyle(
                     height: 1.6,
-                    fontFamily: "SF Pro Display",
                     fontWeight: FontWeight.w700,
                     fontSize: 18,
                     color: Color(0xff000000),
@@ -89,7 +86,6 @@ class _SummaryScreenState extends State<SummaryScreen> {
                 title: Text(
                   "Master Card",
                   style: TextStyle(
-                    fontFamily: "SF Pro Display",
                     fontSize: 12,
                     color: Color(0xff929292),
                   ),
@@ -97,7 +93,6 @@ class _SummaryScreenState extends State<SummaryScreen> {
                 subtitle: Text(
                   "****  ****  ****  4543",
                   style: TextStyle(
-                    fontFamily: "SF Pro Display",
                     fontSize: 16,
                     color: Color(0xff000000),
                   ),

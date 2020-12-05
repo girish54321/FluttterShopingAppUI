@@ -117,41 +117,42 @@ class _AllProductsByBrandState extends State<AllProductsByBrand>
         children: myTabs.map((Tab tab) {
           // final String label = tab.text.toLowerCase();
           return Container(
-              width: double.infinity,
-              height: double.infinity,
-              child: CustomScrollView(
-                  physics: const BouncingScrollPhysics(),
-                  slivers: <Widget>[
-                    SliverToBoxAdapter(
-                        child: SizedBox(
-                      height: 20,
-                    )),
-                    SliverGrid(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        childAspectRatio: (itemWidth / 350),
-                      ),
-                      delegate: SliverChildBuilderDelegate(
-                        (BuildContext context, int index) {
-                          Product product =
-                              bestSeliingProduct.bestSelling.products[index];
-                          return new GridListItem(
-                              index: index,
-                              goToProductDetils: goToProductDetils,
-                              brandName: product.name,
-                              imageUrl: product.image,
-                              inStock: product.available,
-                              productName: product.name,
-                              prise: product.price.toString());
-                        },
-                        childCount:
-                            bestSeliingProduct.bestSelling.products.length,
-                      ),
+            width: double.infinity,
+            height: double.infinity,
+            child: CustomScrollView(
+                physics: const BouncingScrollPhysics(),
+                slivers: <Widget>[
+                  SliverToBoxAdapter(
+                      child: SizedBox(
+                    height: 20,
+                  )),
+                  SliverGrid(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      childAspectRatio: (itemWidth / 350),
                     ),
-                    SliverToBoxAdapter(
-                      child: SizedBox(height: 70),
+                    delegate: SliverChildBuilderDelegate(
+                      (BuildContext context, int index) {
+                        Product product =
+                            bestSeliingProduct.bestSelling.products[index];
+                        return new GridListItem(
+                            index: index,
+                            goToProductDetils: goToProductDetils,
+                            brandName: product.name,
+                            imageUrl: product.image,
+                            inStock: product.available,
+                            productName: product.name,
+                            prise: product.price.toString());
+                      },
+                      childCount:
+                          bestSeliingProduct.bestSelling.products.length,
                     ),
-                  ]));
+                  ),
+                  SliverToBoxAdapter(
+                    child: SizedBox(height: 70),
+                  ),
+                ]),
+          );
         }).toList(),
       ),
       bottomSheet: FilterView(),

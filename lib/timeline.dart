@@ -55,7 +55,6 @@ class _TimelinePageState extends State<TimelinePage> {
               Text(
                 doodle.name,
                 style: TextStyle(
-                  fontFamily: "SF Pro Display",
                   fontWeight: FontWeight.w500,
                   fontSize: 16,
                   color: Color(0xff000000),
@@ -67,7 +66,6 @@ class _TimelinePageState extends State<TimelinePage> {
               new Text(
                 doodle.content,
                 style: TextStyle(
-                  fontFamily: "SF Pro Display",
                   fontSize: 12,
                   color: Color(0xff000000).withOpacity(0.87),
                 ),

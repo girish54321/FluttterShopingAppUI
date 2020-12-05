@@ -2,7 +2,6 @@ import 'package:FlutterShopingAppUI/screen/homeScreen/homemain.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appToolbar.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appbutton.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:pinput/pin_put/pin_put.dart';
 
 class OtpScreen extends StatefulWidget {
@@ -105,7 +104,6 @@ class _OtpScreenState extends State<OtpScreen> {
                           new Text(
                             "Verification",
                             style: TextStyle(
-                              fontFamily: "SF Pro Display",
                               fontWeight: FontWeight.w700,
                               fontSize: 30,
                               color: Color(0xff000000),
@@ -115,7 +113,6 @@ class _OtpScreenState extends State<OtpScreen> {
                           new Text(
                             "A 6 - Digit PIN has been sent to your email address, enter it below to continue",
                             style: TextStyle(
-                              fontFamily: "SF Pro Display",
                               fontSize: 14,
                               color: Color(0xff929292),
                             ),

@@ -19,7 +19,6 @@ class CheckOutScreen extends StatefulWidget {
 // enum BestTutorSite { javatpoint, w3schools, tutorialandexample }
 
 class _CheckOutScreenState extends State<CheckOutScreen> {
-  int _currentStep = 0;
   List<bool> isSelected = [true, false, false];
   PageController pageController;
   int selectedIndex = 0;
@@ -226,7 +225,6 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                             child: Text(
                               "Deliverys",
                               style: TextStyle(
-                                fontFamily: "SF Pro Display",
                                 fontSize: 16,
                                 color: Color(0xff000000),
                               ),
@@ -235,7 +233,6 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           Text(
                             "Address",
                             style: TextStyle(
-                              fontFamily: "SF Pro Display",
                               fontSize: 16,
                               color: Color(0xff000000),
                             ),
@@ -243,7 +240,6 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           Text(
                             "Payments",
                             style: TextStyle(
-                              fontFamily: "SF Pro Display",
                               fontSize: 16,
                               color: Color(0xff000000),
                             ),

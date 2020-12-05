@@ -42,52 +42,64 @@ class _ProductImageViewState extends State<ProductImageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: header(context, ""),
       body: SafeArea(
-          child: PageView(
-        onPageChanged: (index) {
-          setState(() {
-            selectedIndex = index;
-          });
-        },
-        physics: NeverScrollableScrollPhysics(),
-        controller: pageController,
+          child: Stack(
         children: [
-          ...widget.images.asMap().entries.map((MapEntry map) {
-            return InteractiveViewer(
-              child: InkWell(
-                onTap: () {
-                  setState(() {
-                    open = !open;
-                  });
-                },
-                child: CachedNetworkImage(
-                  imageUrl: widget.images[map.key],
-                  imageBuilder: (context, imageProvider) => Container(
-                    height: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      image: DecorationImage(
-                        fit: BoxFit.contain,
-                        image: imageProvider,
+          PageView(
+            onPageChanged: (index) {
+              setState(() {
+                selectedIndex = index;
+              });
+            },
+            physics: NeverScrollableScrollPhysics(),
+            controller: pageController,
+            children: [
+              ...widget.images.asMap().entries.map((MapEntry map) {
+                return InteractiveViewer(
+                  child: InkWell(
+                    onTap: () {
+                      setState(() {
+                        open = !open;
+                      });
+                    },
+                    child: CachedNetworkImage(
+                      imageUrl: widget.images[map.key],
+                      imageBuilder: (context, imageProvider) => Container(
+                        height: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: imageProvider,
+                          ),
+                        ),
                       ),
+                      placeholder: (context, url) => Container(
+                        height: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: AssetImage('assets/images/placholder.jpg'),
+                          ),
+                        ),
+                      ),
+                      errorWidget: (context, url, error) => Icon(Icons.error),
                     ),
                   ),
-                  placeholder: (context, url) => Container(
-                    height: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      image: DecorationImage(
-                        fit: BoxFit.contain,
-                        image: AssetImage('assets/images/placholder.jpg'),
-                      ),
-                    ),
-                  ),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
-                ),
-              ),
-            );
-          }).toList(),
+                );
+              }).toList(),
+            ],
+          ),
+          IconButton(
+            icon: Icon(
+              EvaIcons.arrowIosBack,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          )
         ],
       )),
       bottomSheet: AnimatedContainer(

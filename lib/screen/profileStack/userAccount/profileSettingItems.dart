@@ -17,7 +17,6 @@ class ProfileSettingItems extends StatelessWidget {
       title: Text(
         title,
         style: TextStyle(
-          fontFamily: "SF Pro Display",
           fontSize: 18,
           color: Color(0xff000000),
         ),

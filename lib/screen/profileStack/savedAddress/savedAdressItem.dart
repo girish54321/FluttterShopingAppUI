@@ -30,7 +30,6 @@ class SavedAddressItem extends StatelessWidget {
             title,
             style: TextStyle(
               height: 1.6,
-              fontFamily: "SF Pro Display",
               fontWeight: FontWeight.w700,
               fontSize: 18,
               color: Color(0xff000000),
@@ -40,7 +39,6 @@ class SavedAddressItem extends StatelessWidget {
             subTitle,
             style: TextStyle(
               height: 1.6,
-              fontFamily: "SF Pro Display",
               fontSize: 14,
               color: Color(0xff000000),
             ),

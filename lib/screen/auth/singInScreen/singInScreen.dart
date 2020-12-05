@@ -7,7 +7,6 @@ import 'package:FlutterShopingAppUI/networking/api.dart';
 import 'package:FlutterShopingAppUI/screen/auth/singInScreen/signInUi.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:progress_dialog/progress_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SingInScreen extends StatefulWidget {
@@ -18,7 +17,6 @@ class SingInScreen extends StatefulWidget {
 }
 
 class _SingInScreenState extends State<SingInScreen> {
-  final _formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 

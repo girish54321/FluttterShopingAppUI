@@ -180,7 +180,6 @@ class SignInUi extends StatelessWidget {
                         "-OR-",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontFamily: "SF Pro Display",
                           fontSize: 18,
                           color: Color(0xff000000),
                         ),

@@ -9,7 +9,6 @@ class ToolBarText extends StatelessWidget {
     return Text(
       toolBarText,
       style: TextStyle(
-        fontFamily: "SF Pro Display",
         fontWeight: FontWeight.w700,
         fontSize: 14,
         color: Color(0xff000000),

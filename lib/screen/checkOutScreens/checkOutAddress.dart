@@ -59,25 +59,6 @@ class CheckOutAddress extends StatelessWidget {
                     print("SEE");
                     changeSameAdress(!sameAddressselected);
                   }),
-
-              // Row(
-              //   children: <Widget>[
-              //     Checkbox(
-              //       checkColor: Colors.greenAccent,
-              //       activeColor: Colors.red,
-              //       onChanged: (bool value) {},
-              //       value: false,
-              //     ),
-              //     Text(
-              //       "Billing address is the same as delivery address",
-              //       style: TextStyle(
-              //         fontFamily: "SF Pro Display",
-              //         fontSize: 14,
-              //         color: Color(0xff000000),
-              //       ),
-              //     ),
-              //   ],
-              // ),
               SizedBox(height: 14),
               new Text(
                 "Street 1",

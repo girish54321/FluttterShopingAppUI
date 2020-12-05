@@ -1,4 +1,3 @@
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
 class SocialLoginButton extends StatelessWidget {
@@ -22,10 +21,6 @@ class SocialLoginButton extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(4.00),
         ),
-        // child: ListTile(
-        //   leading: icon,
-
-        // ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

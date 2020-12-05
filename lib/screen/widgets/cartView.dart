@@ -1,8 +1,8 @@
 import 'package:FlutterShopingAppUI/animasions/rightToLeft.dart';
 import 'package:FlutterShopingAppUI/animasions/showUp.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:floating_action_row/floating_action_row.dart';
 
 class CartViewItem extends StatelessWidget {
   final bool isCart;
@@ -51,9 +51,7 @@ class CartViewItem extends StatelessWidget {
             children: [
               new Text(
                 "Tag Heuer Wristwatch",
-                // myList[index].toString(),
                 style: TextStyle(
-                  fontFamily: "SF Pro Display",
                   fontWeight: FontWeight.w500,
                   fontSize: 16,
                   color: Color(0xff000000),
@@ -63,7 +61,6 @@ class CartViewItem extends StatelessWidget {
               Text(
                 prise != null ? prise.toString() : "1100",
                 style: TextStyle(
-                  fontFamily: "SF Pro Display",
                   fontWeight: FontWeight.w500,
                   fontSize: 16,
                   color: Theme.of(context).accentColor,
@@ -93,38 +90,39 @@ class CartViewItem extends StatelessWidget {
                         color: Color(0xffF0F0F0),
                         borderRadius: BorderRadius.circular(4.00),
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          IconButton(
-                            icon: Icon(EvaIcons.plus),
-                            tooltip: 'Increase volume by 10',
-                            onPressed: () {
-                              // addItem();
-                            },
-                          ),
+                      child: FloatingActionRow(
+                        borderRadius: BorderRadius.all(Radius.circular(4)),
+                        color: Color(0xffF0F0F0),
+                        children: <Widget>[
+                          FloatingActionRowButton(
+                              icon: Icon(
+                                Icons.remove,
+                                color: Colors.black,
+                              ),
+                              onTap: () {}),
+                          FloatingActionRowDivider(),
                           ShowUp(
                             delay: 400,
-                            child: Text(
-                              "2",
-                              style: TextStyle(
-                                fontFamily: "SF Pro Display",
-                                fontSize: 18,
-                                color: Color(0xff000000),
+                            child: Container(
+                              width: 46,
+                              child: Text(
+                                "2",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 18,
+                                ),
                               ),
                             ),
                           ),
-                          IconButton(
-                            icon: Icon(EvaIcons.minus),
-                            tooltip: 'Increase volume by 10',
-                            onPressed: () {
-                              // removeItem();
-                            },
-                          ),
+                          FloatingActionRowDivider(),
+                          FloatingActionRowButton(
+                              icon: Icon(
+                                Icons.add,
+                                color: Colors.black,
+                              ),
+                              onTap: () {}),
                         ],
-                      ),
-                    )
+                      ))
             ],
           )
         ],

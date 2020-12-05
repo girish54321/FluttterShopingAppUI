@@ -77,7 +77,6 @@ class Modal {
       leading: new Text(
         title,
         style: TextStyle(
-          fontFamily: "SF Pro Display",
           fontSize: 16,
           color: Color(0xff000000),
         ),
@@ -87,7 +86,6 @@ class Modal {
         prise,
         textAlign: TextAlign.right,
         style: TextStyle(
-          fontFamily: "SF Pro Display",
           fontWeight: FontWeight.w700,
           fontSize: 18,
           color: Color(0xff000000),
@@ -98,14 +96,6 @@ class Modal {
         action();
       },
     );
-  }
-
-  _action1() {
-    print('action 1');
-  }
-
-  _action2() {
-    print('action 2');
   }
 
   _action3() {
@@ -125,7 +115,6 @@ class _TotalaAmountViewState extends State<TotalaAmountView> {
       leading: new Text(
         title,
         style: TextStyle(
-          fontFamily: "SF Pro Display",
           fontSize: 16,
           color: Color(0xff000000),
         ),
@@ -135,7 +124,6 @@ class _TotalaAmountViewState extends State<TotalaAmountView> {
         prise,
         textAlign: TextAlign.right,
         style: TextStyle(
-          fontFamily: "SF Pro Display",
           fontWeight: FontWeight.w700,
           fontSize: 18,
           color: Color(0xff000000),

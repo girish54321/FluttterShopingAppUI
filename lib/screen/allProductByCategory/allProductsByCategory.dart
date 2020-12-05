@@ -67,7 +67,6 @@ class _AllProductsByCategoryState extends State<AllProductsByCategory> {
         title: Text(
           "Gadgets",
           style: TextStyle(
-            fontFamily: "SF Pro Display",
             fontSize: 20,
             color: Color(0xff000000),
           ),

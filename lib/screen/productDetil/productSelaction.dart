@@ -142,7 +142,6 @@ class _ProductSelctionState extends State<ProductSelction> {
                     Text(
                       "Size",
                       style: TextStyle(
-                        fontFamily: "SF Pro Display",
                         fontSize: 14,
                         color: Color(0xff000000),
                       ),
@@ -151,7 +150,6 @@ class _ProductSelctionState extends State<ProductSelction> {
                       _category,
                       textAlign: TextAlign.right,
                       style: TextStyle(
-                        fontFamily: "SF Pro Display",
                         fontWeight: FontWeight.w700,
                         fontSize: 14,
                         color: Color(0xff000000),
@@ -178,7 +176,6 @@ class _ProductSelctionState extends State<ProductSelction> {
                   Text(
                     "Size",
                     style: TextStyle(
-                      fontFamily: "SF Pro Display",
                       fontSize: 14,
                       color: Color(0xff000000),
                     ),

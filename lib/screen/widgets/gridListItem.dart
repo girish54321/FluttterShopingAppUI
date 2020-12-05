@@ -55,7 +55,7 @@ class GridListItem extends StatelessWidget {
                       height: 240.00,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                            fit: BoxFit.contain,
+                            fit: BoxFit.cover,
                             image: AssetImage('assets/images/placholder.jpg')),
                         borderRadius: BorderRadius.circular(4.00),
                       ),
@@ -71,7 +71,6 @@ class GridListItem extends StatelessWidget {
                 child: new Text(
                   productName != null ? productName : "",
                   style: TextStyle(
-                    fontFamily: "SF Pro Display",
                     fontWeight: FontWeight.w500,
                     fontSize: 16,
                     color: Color(0xff000000),
@@ -84,7 +83,6 @@ class GridListItem extends StatelessWidget {
                 child: new Text(
                   brandName != null ? brandName : "",
                   style: TextStyle(
-                    fontFamily: "SF Pro Display",
                     fontSize: 12,
                     color: Color(0xff929292),
                   ),
@@ -96,7 +94,6 @@ class GridListItem extends StatelessWidget {
                 child: new Text(
                   prise != null ? "₹$prise" : "₹$prise",
                   style: TextStyle(
-                    fontFamily: "SF Pro Display",
                     fontWeight: FontWeight.w500,
                     fontSize: 16,
                     color: Color(0xff00c569),

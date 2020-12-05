@@ -6,8 +6,6 @@ import 'package:FlutterShopingAppUI/screen/profileStack/savedCard/savedCards.dar
 import 'package:FlutterShopingAppUI/screen/profileStack/trackOrderScreen/trackOrderScreen.dart';
 import 'package:FlutterShopingAppUI/screen/profileStack/userAccount/profileSettingItems.dart';
 import 'package:FlutterShopingAppUI/screen/profileStack/wishList/wishListScreen.dart';
-import 'package:FlutterShopingAppUI/screen/widgets/appToolbar.dart';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
@@ -71,17 +69,13 @@ class _UserAccountState extends State<UserAccount> {
                   title: Text(
                     "David Spade",
                     style: TextStyle(
-                      fontFamily: "SF Pro Display",
                       fontWeight: FontWeight.w500,
                       fontSize: 26,
                     ),
                   ),
                   subtitle: Text(
                     "iamdavid@gmail.com",
-                    style: TextStyle(
-                        fontFamily: "SF Pro Display",
-                        fontSize: 14,
-                        height: 1.7),
+                    style: TextStyle(fontSize: 14, height: 1.7),
                   ),
                 ),
               ),
@@ -135,7 +129,6 @@ class _UserAccountState extends State<UserAccount> {
                   title: Text(
                     "Track Order",
                     style: TextStyle(
-                      fontFamily: "SF Pro Display",
                       fontSize: 18,
                       color: Color(0xff000000),
                     ),

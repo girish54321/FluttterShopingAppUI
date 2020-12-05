@@ -24,7 +24,6 @@ class FilterView extends StatelessWidget {
                 child: Text(
               "No filters applied",
               style: TextStyle(
-                fontFamily: "SF Pro Display",
                 fontWeight: FontWeight.w700,
                 fontSize: 14,
                 color: Color(0xff000000),

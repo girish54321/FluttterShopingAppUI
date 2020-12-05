@@ -31,7 +31,6 @@ class CheckOutAddToCartView extends StatelessWidget {
                       Text(
                         "PRICE",
                         style: TextStyle(
-                          fontFamily: "SF Pro Display",
                           fontSize: 12,
                           color: Color(0xff929292),
                         ),
@@ -39,7 +38,6 @@ class CheckOutAddToCartView extends StatelessWidget {
                       Text(
                         price,
                         style: TextStyle(
-                          fontFamily: "SF Pro Display",
                           fontWeight: FontWeight.w700,
                           fontSize: 18,
                           color: Color(0xff00c569),

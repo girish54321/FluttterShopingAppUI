@@ -77,7 +77,6 @@ class TrackOrderItem extends StatelessWidget {
                               done ? "Delivered" : "In Transit",
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                fontFamily: "SF Pro Display",
                                 fontWeight: FontWeight.w500,
                                 fontSize: 14,
                                 color: Color(0xffffffff),

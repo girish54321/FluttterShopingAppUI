@@ -53,6 +53,15 @@ class _ProductDetiasState extends State<ProductDetias> {
             expandedHeight: size.height * 0.6,
             floating: false,
             pinned: false,
+            leading: IconButton(
+              icon: Icon(
+                EvaIcons.arrowIosBack,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
             flexibleSpace: FlexibleSpaceBar(
                 background: Stack(
               children: [
@@ -72,7 +81,6 @@ class _ProductDetiasState extends State<ProductDetias> {
               child: new Text(
                 widget.product.name,
                 style: TextStyle(
-                  fontFamily: "SF Pro Display",
                   fontWeight: FontWeight.w700,
                   fontSize: 26,
                   color: Color(0xff000000),
@@ -134,7 +142,6 @@ class _ProductDetiasState extends State<ProductDetias> {
                       widget.product.description,
                       style: TextStyle(
                         height: 1.8,
-                        fontFamily: "SF Pro Display",
                         fontSize: 18,
                       ),
                     ),
@@ -148,7 +155,6 @@ class _ProductDetiasState extends State<ProductDetias> {
                       "Read More",
                       style: TextStyle(
                         height: 1.8,
-                        fontFamily: "SF Pro Display",
                         fontSize: 18,
                         color: Color(0xff00c569),
                       ),
@@ -178,7 +184,7 @@ class _ProductDetiasState extends State<ProductDetias> {
                           "Samuel Smith",
                           style: TextStyle(
                             height: 1.8,
-                            fontFamily: "SF Pro Display",
+
                             fontWeight: FontWeight.w700,
                             // fontSize: 16,
                             color: Color(0xff000000),
@@ -188,8 +194,6 @@ class _ProductDetiasState extends State<ProductDetias> {
                           "Wonderful jean, perfect gift for my girl for our anniversary!",
                           style: TextStyle(
                             height: 1.7,
-                            fontFamily: "SF Pro Display",
-                            // fontSize: 16,
                             color: Color(0xff000000),
                           ),
                         )),

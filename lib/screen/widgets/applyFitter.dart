@@ -1,6 +1,4 @@
-import 'package:FlutterShopingAppUI/screen/flitterView/flitterScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
 
 class ApplayFilterView extends StatelessWidget {
   const ApplayFilterView({Key key}) : super(key: key);

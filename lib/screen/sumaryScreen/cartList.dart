@@ -41,7 +41,6 @@ class CartListItem extends StatelessWidget {
             child: Text(
               "Tag Heuer...",
               style: TextStyle(
-                fontFamily: "SF Pro Display",
                 fontWeight: FontWeight.w500,
                 fontSize: 16,
                 color: Color(0xff000000),
@@ -53,7 +52,6 @@ class CartListItem extends StatelessWidget {
             child: Text(
               "1100",
               style: TextStyle(
-                fontFamily: "SF Pro Display",
                 fontWeight: FontWeight.w500,
                 fontSize: 16,
                 color: Theme.of(context).accentColor,

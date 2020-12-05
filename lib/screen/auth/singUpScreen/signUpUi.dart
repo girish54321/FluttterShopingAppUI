@@ -1,11 +1,9 @@
 import 'package:FlutterShopingAppUI/helper/helper.dart';
 import 'package:FlutterShopingAppUI/provider/loginState.dart';
-import 'package:FlutterShopingAppUI/screen/auth/otpScreen/otpScreen.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appInputText.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appToolbar.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/appbutton.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:rules/rules.dart';
 

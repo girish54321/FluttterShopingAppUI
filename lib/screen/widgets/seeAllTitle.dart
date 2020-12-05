@@ -15,7 +15,6 @@ class SeeAppTitle extends StatelessWidget {
           new Text(
             title,
             style: TextStyle(
-              fontFamily: "SF Pro Display",
               fontWeight: FontWeight.w700,
               fontSize: 18,
               color: Color(0xff000000),
@@ -25,7 +24,6 @@ class SeeAppTitle extends StatelessWidget {
             "See all",
             textAlign: TextAlign.right,
             style: TextStyle(
-              fontFamily: "SF Pro Display",
               fontSize: 16,
               color: Color(0xff000000),
             ),

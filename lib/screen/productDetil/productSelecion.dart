@@ -48,7 +48,6 @@ class ModalProductSelecation {
       leading: new Text(
         title,
         style: TextStyle(
-          fontFamily: "SF Pro Display",
           fontSize: 16,
           color: Color(0xff000000),
         ),
@@ -58,7 +57,6 @@ class ModalProductSelecation {
         prise,
         textAlign: TextAlign.right,
         style: TextStyle(
-          fontFamily: "SF Pro Display",
           fontWeight: FontWeight.w700,
           fontSize: 18,
           color: Color(0xff000000),
@@ -69,17 +67,5 @@ class ModalProductSelecation {
         action();
       },
     );
-  }
-
-  _action1() {
-    print('action 1');
-  }
-
-  _action2() {
-    print('action 2');
-  }
-
-  _action3() {
-    print('action 3');
   }
 }

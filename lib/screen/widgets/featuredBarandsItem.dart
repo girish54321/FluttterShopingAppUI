@@ -73,7 +73,6 @@ class FeaturedBrands extends StatelessWidget {
                     new Text(
                       title,
                       style: TextStyle(
-                        fontFamily: "SF Pro Display",
                         fontWeight: FontWeight.w700,
                         fontSize: 16,
                         color: Color(0xff000000),
@@ -84,7 +83,6 @@ class FeaturedBrands extends StatelessWidget {
                       child: new Text(
                         "5693 Products",
                         style: TextStyle(
-                          fontFamily: "SF Pro Display",
                           fontSize: 12,
                           color: Color(0xff929292),
                         ),
