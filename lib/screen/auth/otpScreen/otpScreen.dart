@@ -15,13 +15,6 @@ class _OtpScreenState extends State<OtpScreen> {
   final TextEditingController _pinPutController = TextEditingController();
   final FocusNode _pinPutFocusNode = FocusNode();
 
-  BoxDecoration get _pinPutDecoration {
-    return BoxDecoration(
-      border: Border.all(color: Colors.deepPurpleAccent),
-      borderRadius: BorderRadius.circular(15.0),
-    );
-  }
-
   Widget onlySelectedBorderPinPut() {
     final BoxDecoration pinPutDecoration = BoxDecoration(
       color: const Color.fromRGBO(235, 236, 237, 1),

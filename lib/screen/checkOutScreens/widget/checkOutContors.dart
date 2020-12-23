@@ -1,4 +1,3 @@
-import 'package:FlutterShopingAppUI/animasions/rightToLeft.dart';
 import 'package:flutter/material.dart';
 
 class CheckOutControls extends StatelessWidget {
@@ -17,9 +16,7 @@ class CheckOutControls extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return RightToLeft(
-    //   delay: 200,
-    //   child:
+  
     return Container(
       height: 70,
       padding: EdgeInsets.symmetric(horizontal: 16),

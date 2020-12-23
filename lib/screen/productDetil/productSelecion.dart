@@ -41,31 +41,4 @@ class ModalProductSelecation {
           );
         });
   }
-
-  ListTile _createTile(
-      BuildContext context, String title, String prise, Function action) {
-    return ListTile(
-      leading: new Text(
-        title,
-        style: TextStyle(
-          fontSize: 16,
-          color: Color(0xff000000),
-        ),
-      ),
-      // title: Text(name),
-      trailing: new Text(
-        prise,
-        textAlign: TextAlign.right,
-        style: TextStyle(
-          fontWeight: FontWeight.w700,
-          fontSize: 18,
-          color: Color(0xff000000),
-        ),
-      ),
-      onTap: () {
-        Navigator.pop(context);
-        action();
-      },
-    );
-  }
 }

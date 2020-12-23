@@ -11,6 +11,7 @@ class SuccessScreen extends StatefulWidget {
 
 class _SuccessScreenState extends State<SuccessScreen> {
   Widget anim() {
+    // ignore: deprecated_member_use
     return ControlledAnimation(
       duration: Duration(milliseconds: 600),
       curve: Curves.bounceIn,

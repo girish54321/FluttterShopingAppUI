@@ -62,8 +62,7 @@ class _AllProductsByBrandState extends State<AllProductsByBrand>
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-
-    /*24 is for notification bar on Android*/
+    // ignore: unused_local_variable
     final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
     final double itemWidth = size.width / 2;
     return Scaffold(

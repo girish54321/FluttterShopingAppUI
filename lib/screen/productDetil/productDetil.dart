@@ -1,7 +1,6 @@
 import 'package:FlutterShopingAppUI/animasions/FadeAnimation.dart';
 import 'package:FlutterShopingAppUI/modal/BestSelingProductModal.dart';
 import 'package:FlutterShopingAppUI/screen/productDetil/productImage.dart';
-import 'package:FlutterShopingAppUI/screen/productDetil/productSelaction.dart';
 import 'package:FlutterShopingAppUI/screen/productDetil/productSelcastion2.dart';
 import 'package:FlutterShopingAppUI/screen/productDetil/productViewImages.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/chekOutAddtoCart.dart';
@@ -41,10 +40,6 @@ class _ProductDetiasState extends State<ProductDetias> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-
-    /*24 is for notification bar on Android*/
-    final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
-    final double itemWidth = size.width / 2;
     return Scaffold(
       body: CustomScrollView(
         physics: const BouncingScrollPhysics(),

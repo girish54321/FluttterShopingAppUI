@@ -55,8 +55,7 @@ class _AllProductsByCategoryState extends State<AllProductsByCategory> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-
-    /*24 is for notification bar on Android*/
+    // ignore: unused_local_variable
     final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
     final double itemWidth = size.width / 2;
     return Scaffold(
@@ -79,9 +78,7 @@ class _AllProductsByCategoryState extends State<AllProductsByCategory> {
         actions: [
           IconButton(
               icon: Icon(EvaIcons.search, color: Theme.of(context).accentColor),
-              onPressed: () {
-                // Navigator.of(context).pop();
-              }),
+              onPressed: () {}),
         ],
       ),
       body: Container(

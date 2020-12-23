@@ -15,7 +15,6 @@ class FlitterView extends StatefulWidget {
 
 class _FlitterViewState extends State<FlitterView> {
   var _category;
-  List<String> _categoryList = [];
   FiltterModle filtterModle;
   List<S2Choice<String>> categories = [
     S2Choice<String>(value: 'ele', title: 'Electronics'),

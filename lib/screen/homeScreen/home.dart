@@ -14,7 +14,6 @@ import 'package:FlutterShopingAppUI/screen/widgets/gridListItem.dart';
 import 'package:FlutterShopingAppUI/screen/widgets/seeAllTitle.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 class Home extends StatefulWidget {
   @override
@@ -85,9 +84,6 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-
-    /*24 is for notification bar on Android*/
-    final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
     final double itemWidth = size.width / 2;
     return Container(
       width: double.infinity,
