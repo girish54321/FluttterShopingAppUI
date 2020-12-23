@@ -1,15 +1,10 @@
 # FluttterShopingAppUI
 
-# Home Screen
-<img src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/1.jpg" height="800">
-
-<img src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/2.jpg" height="800">
-
-<img src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/3.jpg" height="800">
- 
-<img src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/4.jpg" height="800">
-
-<img src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/5.jpg" height="800">
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604"  src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/1.jpg">  Screen 1 |  <img width="1604" src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/2.jpg"> Screen 2 |<img width="1604" src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/3.jpg"> Screen 3 |
+|<img width="1604" src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/4.jpg">Screen 4 |  <img width="1604" src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/5.jpg">  Screen 5|<img width="1604" src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/1.jpg"> Screen 1|
+|
 
 This my flutter UI project.
 
