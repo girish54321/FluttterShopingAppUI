@@ -12,6 +12,7 @@ class InputText extends StatefulWidget {
   final String errorText;
   final Function onChnaged;
   final FormFieldValidator validator;
+  final int maxInput;
 
   const InputText(
       {Key key,
@@ -25,7 +26,8 @@ class InputText extends StatefulWidget {
       this.textInputType,
       this.errorText,
       this.onChnaged,
-      this.validator});
+      this.validator,
+      this.maxInput});
 
   @override
   _InputTextState createState() => _InputTextState();
@@ -38,6 +40,7 @@ class _InputTextState extends State<InputText> {
       padding: EdgeInsets.only(bottom: 18, top: 9),
       decoration: BoxDecoration(),
       child: TextFormField(
+        maxLength: widget.maxInput != null ? widget.maxInput : null,
         keyboardType: widget.textInputType,
         focusNode: widget.focusNode,
         onChanged: widget.onChnaged,

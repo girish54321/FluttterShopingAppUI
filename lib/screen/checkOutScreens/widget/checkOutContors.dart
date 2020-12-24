@@ -16,7 +16,6 @@ class CheckOutControls extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  
     return Container(
       height: 70,
       padding: EdgeInsets.symmetric(horizontal: 16),
@@ -39,7 +38,7 @@ class CheckOutControls extends StatelessWidget {
               onPressed: () {
                 goBack();
               },
-              child: new Text(
+              child: Text(
                 "BACK",
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -61,10 +60,9 @@ class CheckOutControls extends StatelessWidget {
               splashColor: Colors.white,
               highlightColor: Theme.of(context).accentColor,
               onPressed: () {
-                // print("CHCHC");
                 changeIndex();
               },
-              child: new Text(
+              child: Text(
                 buttonText != null ? buttonText : "NEXT",
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -76,7 +74,6 @@ class CheckOutControls extends StatelessWidget {
             ),
           )
         ],
-        // ),
       ),
     );
   }

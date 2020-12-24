@@ -6,7 +6,6 @@ class OutOfStockView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      // right: 1,
       left: 1,
       child: Container(
         margin: EdgeInsets.all(6),

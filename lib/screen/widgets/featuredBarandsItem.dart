@@ -44,7 +44,6 @@ class FeaturedBrands extends StatelessWidget {
                   height: 55.00,
                   width: 55.00,
                   decoration: BoxDecoration(
-                    // color: Color(0xff000000),
                     shape: BoxShape.circle,
                     image: DecorationImage(
                       fit: BoxFit.contain,

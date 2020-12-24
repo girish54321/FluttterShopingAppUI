@@ -8,12 +8,12 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_select/smart_select.dart';
 
-class FlitterView extends StatefulWidget {
+class FilterView extends StatefulWidget {
   @override
-  _FlitterViewState createState() => _FlitterViewState();
+  _FilterViewState createState() => _FilterViewState();
 }
 
-class _FlitterViewState extends State<FlitterView> {
+class _FilterViewState extends State<FilterView> {
   var _category;
   FiltterModle filtterModle;
   List<S2Choice<String>> categories = [

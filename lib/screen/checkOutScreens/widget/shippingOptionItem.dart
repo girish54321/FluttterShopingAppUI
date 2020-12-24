@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ShipingOpstionItem extends StatelessWidget {
+class ShippingOptionItem extends StatelessWidget {
   final dynamic value;
   final dynamic groupValue;
   final Function function;
   final String title;
   final String subTitle;
   final Function changeDeliveryAddressType;
-  const ShipingOpstionItem(
+  const ShippingOptionItem(
       {Key key,
       this.value,
       this.groupValue,

@@ -24,7 +24,7 @@ class Helper {
       forwardAnimationCurve: Curves.easeInOut,
       duration: Duration(seconds: 5),
       margin: EdgeInsets.all(8),
-      borderRadius: 8,
+      borderRadius: 6,
     )..show(context);
   }
 

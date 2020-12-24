@@ -17,10 +17,6 @@ class AppBottomNavigationBar extends StatelessWidget {
         currentIndex:
             selectedIndex, // Use this to update the Bar giving a position
         onTap: (index) {
-          print("Selected Index: $index");
-          // setState(() {
-          //   selectedIndex = index;
-          // });
           changeIndex(index);
         },
         items: [

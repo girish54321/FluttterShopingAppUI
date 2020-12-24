@@ -28,7 +28,6 @@ class ProductImage extends StatelessWidget {
             ...images.asMap().entries.map((MapEntry map) {
               return InkWell(
                 onTap: () {
-                  print("object");
                   goToImageView(images);
                 },
                 child: CachedNetworkImage(
