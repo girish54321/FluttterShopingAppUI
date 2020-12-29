@@ -32,7 +32,6 @@ class CheckOutAddress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _formKey12 = GlobalKey<FormState>();
     return SingleChildScrollView(
       child: Container(
         margin: EdgeInsets.symmetric(

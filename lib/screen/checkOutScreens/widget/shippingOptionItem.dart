@@ -41,9 +41,7 @@ class ShippingOptionItem extends StatelessWidget {
             ),
           ),
           trailing: Radio(
-            // value: BestTutorSite.javatpoint,
             value: value,
-            // groupValue: _site,
             groupValue: groupValue,
             onChanged: (value) {
               changeDeliveryAddressType(value);
