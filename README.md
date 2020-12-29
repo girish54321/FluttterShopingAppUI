@@ -1,5 +1,7 @@
 # FluttterShopingAppUI
 
+<img  src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/showcase.png"> 
+
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1604"  src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/1.jpg">  Screen 1 |  <img width="1604" src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/2.jpg"> Screen 2 |<img width="1604" src="https://github.com/girish54321/FluttterShopingAppUI/blob/main/app_image/3.jpg"> Screen 3 |
